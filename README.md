@@ -132,4 +132,4 @@ Each database contains a `ticker_data` table with scalar fields (spot, gamma lev
 
 ## License
 
-MIT
+GPL-3.0
