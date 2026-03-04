@@ -69,7 +69,7 @@ This is also where the SQLite databases will be stored (in `Tickers MM.DD.YYYY/`
 
 | Input | Name | Default | Description |
 |-------|------|---------|-------------|
-| In:1 | FOLDER | `%USERPROFILE%\Documents\MAIN\TRADING\OPTIONS` | Root data directory. The collector creates `Tickers MM.DD.YYYY/` subdirectories here. |
+| In:1 | FOLDER | `%USERPROFILE%\Documents` | Root data directory. The collector creates `Tickers MM.DD.YYYY/` subdirectories here. |
 | In:2 | TICKER | `ES_SPX` | Ticker symbol matching the GEXBot API (e.g. `ES_SPX`, `SPY`, `QQQ`, `NQ_NDX`). |
 | In:3 | NB DAYS | `2` | Number of historical days to load from SQLite databases. |
 | In:4 | Max age (sec) | `120` | Maximum age (in seconds) of the latest data point before levels are considered stale. |

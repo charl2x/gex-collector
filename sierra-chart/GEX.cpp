@@ -63,8 +63,8 @@ static std::string GetDefaultFolder()
     char profile[MAX_PATH] = {};
     DWORD len = GetEnvironmentVariableA("USERPROFILE", profile, MAX_PATH);
     if (len == 0 || len >= MAX_PATH)
-        return "C:\\Users\\charl\\Documents\\MAIN\\TRADING\\OPTIONS";
-    return std::string(profile) + "\\Documents\\MAIN\\TRADING\\OPTIONS";
+        return "";
+    return std::string(profile) + "\\Documents";
 }
 
 static void ResetAll(GammaData* d)
@@ -512,7 +512,7 @@ SCSFExport scsf_GEX_MAJORS(SCStudyInterfaceRef sc)
         RefreshMs.SetInt(1);
 
         ExePath.Name = "EXE Path";
-        ExePath.SetString("C:\\Users\\charl\\Documents\\MAIN\\TRADING\\OPTIONS\\gex-collector.exe");
+        ExePath.SetString((GetDefaultFolder() + "\\gex-collector.exe").c_str());
 
         return;
     }
